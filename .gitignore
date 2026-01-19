@@ -30,3 +30,13 @@ dist-ssr
 
 # Thumbnails
 ._*
+
+# Utility scripts (development only)
+extract_textures.py
+upscale_simple.py
+rebuild_glb.js
+upscale_textures.js
+
+# Temporary directories
+extracted_textures/
+2020-f1-red-bull-rb16/

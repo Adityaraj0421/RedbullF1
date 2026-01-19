@@ -10,6 +10,7 @@ import { GyroTracker } from './components/GyroTracker'
 import { OffAxisProjection } from './components/OffAxisProjection'
 import { WindowFrame } from './components/WindowFrame'
 import { F1HUD } from './components/F1HUD'
+import { Loader } from './components/Loader'
 
 import { SoundManager } from './components/SoundManager'
 import { IgnitionSequence } from './components/IgnitionSequence'
@@ -49,6 +50,9 @@ function App() {
 
     return (
         <>
+            {/* Loader - Tracks all asset loading */}
+            <Loader />
+
             {/* Input Tracker - FaceTracker for desktop, GyroTracker for mobile */}
             {isMobile ? <GyroTracker /> : <FaceTracker />}
 
@@ -70,8 +74,6 @@ function App() {
                     depth: true
                 }}
             >
-                {/* Stats for debugging */}
-
                 <Suspense fallback={null}>
                     <Stage />
                     {/* F1Car positioned 'inside' the box (Z < 0) */}
@@ -80,19 +82,13 @@ function App() {
                     </group>
                     {/* OffAxisProjection - True Fish Tank VR with asymmetric frustum */}
                     <OffAxisProjection />
-
                 </Suspense>
-
-
-
 
                 {/* WindowFrame - Static anchor for depth perception */}
                 <WindowFrame />
 
                 {/* Ignition Effect */}
                 <IgnitionSequence />
-
-
 
                 <EffectComposer>
                     {/* Basic Bloom */}

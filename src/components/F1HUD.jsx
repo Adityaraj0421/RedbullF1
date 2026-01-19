@@ -82,9 +82,9 @@ export function F1HUD() {
             let glow = 'none'
 
             if (active) {
-                if (i < 5) color = '#00ff00' // Green
-                else if (i < 10) color = '#ff3333' // Red
-                else color = '#00ffff' // Blue
+                if (i < 5) color = '#CB2026' // Red Bull Red - Low RPM
+                else if (i < 10) color = '#ff3333' // Bright Red - Mid RPM
+                else color = '#CB2026' // Red Bull Red - High RPM
                 glow = `0 0 10px ${color}`
             }
 
@@ -151,7 +151,7 @@ export function F1HUD() {
                     {/* LEFT COLUMN: Tires/Temps */}
                     <div style={{ textAlign: 'left', fontSize: '10px', color: '#888', display: 'flex', flexDirection: 'column', gap: '4px' }}>
                         <div>
-                            <span style={{ color: '#ffaa00' }}>TYRE</span> <span style={{ color: '#fff' }}>SOFT</span>
+                            <span style={{ color: '#FFC906' }}>TYRE</span> <span style={{ color: '#fff' }}>SOFT</span>
                         </div>
                         <div>
                             <span>FL</span> <span style={{ color: '#fff', fontSize: '12px' }}>98°</span>
@@ -185,9 +185,9 @@ export function F1HUD() {
                     {/* RIGHT COLUMN: Delta/Lap */}
                     <div style={{ textAlign: 'right', fontSize: '10px', color: '#888', display: 'flex', flexDirection: 'column', gap: '4px' }}>
                         <div>
-                            <span style={{ color: '#00ff00' }}>DELTA</span>
+                            <span style={{ color: '#CB2026' }}>DELTA</span>
                         </div>
-                        <div style={{ fontSize: '14px', color: '#00ff00', fontWeight: 'bold' }}>
+                        <div style={{ fontSize: '14px', color: '#CB2026', fontWeight: 'bold' }}>
                             -0.412
                         </div>
                         <div style={{ marginTop: '4px' }}>
@@ -209,14 +209,14 @@ export function F1HUD() {
                     fontSize: '10px'
                 }}>
                     <div style={{ display: 'flex', gap: '4px', alignItems: 'center' }}>
-                        <span style={{ color: '#ffff00' }}>ERS</span>
+                        <span style={{ color: '#FFC906' }}>ERS</span>
                         <div style={{ width: '40px', height: '4px', background: '#333' }}>
-                            <div style={{ width: '80%', height: '100%', background: '#ffff00' }} />
+                            <div style={{ width: '80%', height: '100%', background: '#FFC906' }} />
                         </div>
                     </div>
                     {/* Status Text from Store */}
                     <div style={{
-                        color: trackingStatus === 'ACTIVE' ? '#00ff00' : 'orange',
+                        color: trackingStatus === 'ACTIVE' ? '#CB2026' : 'orange',
                         fontWeight: 'bold'
                     }}>
                         {trackingStatus}
@@ -295,7 +295,7 @@ export function F1HUD() {
                         <div style={{
                             width: '24px',
                             height: '24px',
-                            background: '#00ff00',
+                            background: '#CB2026',
                             borderRadius: '50%',
                             border: '2px solid #ccc'
                         }} />

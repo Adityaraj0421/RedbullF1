@@ -101,7 +101,7 @@ export function Stage() {
         angle={0.5}
         penumbra={1}
         intensity={2}
-        color="#3366ff"
+        color="#FFC906"
         castShadow={false}
         target-position={[0, 0.5, 0]}
       />
@@ -112,7 +112,7 @@ export function Stage() {
         angle={0.5}
         penumbra={1}
         intensity={2}
-        color="#ffaa00"
+        color="#FFC906"
         castShadow={true}
         shadow-bias={-0.0001}
         target-position={[0, 0.5, 0]}
@@ -124,7 +124,7 @@ export function Stage() {
         angle={0.5}
         penumbra={1}
         intensity={5}
-        color="#00ffff"
+        color="#CB2026"
         castShadow={true}
         shadow-bias={-0.0001}
         shadow-mapSize={[2048, 2048]}
@@ -235,24 +235,24 @@ export function Stage() {
 
       {/* 5. LED/LASER STRIPS */}
 
-      {/* Blue LED strips at walls */}
-      <mesh ref={ledStrip1} position={[-3.48, 0.02, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+      {/* Yellow LED strips */}
+      <mesh ref={ledStrip1} position={[-2.8, 0.02, 0]} rotation={[-Math.PI / 2, 0, 0]}>
         <planeGeometry args={[0.05, 24]} />
-        <meshStandardMaterial color="#3366ff" emissive="#3366ff" emissiveIntensity={3} toneMapped={false} />
+        <meshStandardMaterial color="#FFC906" emissive="#FFC906" emissiveIntensity={1.5} toneMapped={false} />
       </mesh>
-      <mesh ref={ledStrip2} position={[3.48, 0.02, 0]} rotation={[-Math.PI / 2, 0, 0]}>
+      <mesh ref={ledStrip2} position={[2.8, 0.02, 0]} rotation={[-Math.PI / 2, 0, 0]}>
         <planeGeometry args={[0.05, 24]} />
-        <meshStandardMaterial color="#3366ff" emissive="#3366ff" emissiveIntensity={3} toneMapped={false} />
+        <meshStandardMaterial color="#FFC906" emissive="#FFC906" emissiveIntensity={1.5} toneMapped={false} />
       </mesh>
 
-      {/* Cyan Pit Lane Lasers */}
+      {/* Red Bull Red Pit Lane Lasers */}
       <mesh ref={laserStrip1} position={[-2.5, 0.02, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-        <planeGeometry args={[0.02, 24]} />
-        <meshStandardMaterial emissive="#00ffff" emissiveIntensity={4} color="#000000" toneMapped={false} />
+        <planeGeometry args={[0.05, 24]} />
+        <meshStandardMaterial emissive="#CB2026" emissiveIntensity={2} color="#000000" toneMapped={false} />
       </mesh>
       <mesh ref={laserStrip2} position={[2.5, 0.02, 0]} rotation={[-Math.PI / 2, 0, 0]}>
-        <planeGeometry args={[0.02, 24]} />
-        <meshStandardMaterial emissive="#00ffff" emissiveIntensity={4} color="#000000" toneMapped={false} />
+        <planeGeometry args={[0.05, 24]} />
+        <meshStandardMaterial emissive="#CB2026" emissiveIntensity={2} color="#000000" toneMapped={false} />
       </mesh>
 
       {/* 6. FLOOR - Asphalt Pit Lane */}
@@ -278,7 +278,7 @@ export function Stage() {
         size={2}
         speed={0.2}
         opacity={0.4}
-        color="#dcb25c"
+        color="#FFC906"
         position={[0, 2, 0]}
       />
     </>
